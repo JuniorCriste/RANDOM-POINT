@@ -1,0 +1,61 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,63,63)
+  Font = Font["Roboto,Bold,+6"]
+  Icon = Picture["assets/rpicone.png"]
+  Resizable = False
+  Border = False
+  { fundo PictureBox
+    MoveScaled(0,0,64.2857,71.4286)
+    Picture = Picture["assets/backblue.png"]
+  }
+  { go ToolButton
+    MoveScaled(41,55,20,6)
+    Visible = False
+    Background = &HC3C1B9&
+    Foreground = &H4BBC41&
+    Text = ("PRONTO")
+  }
+  { pergunta Label
+    MoveScaled(0,1,64,18)
+    Text = ("Sortear Números ou Nomes?")
+    Alignment = Align.Center
+  }
+  { valolo SliderBox
+    MoveScaled(17,43,28,8)
+    Visible = False
+    Background = &H1588BD&
+    MinValue = 1
+    MaxValue = 1000000
+    DefaultValue = 10
+    Value = 10
+  }
+  { opnum ToolButton
+    MoveScaled(7,14,25,11)
+    Foreground = &H292A29&
+    Ignore = True
+    Text = ("NÚMEROS")
+  }
+  { opnnam ToolButton
+    MoveScaled(32,14,25,11)
+    Foreground = &H292A29&
+    Ignore = True
+    Text = ("NOMES")
+  }
+  { voltar ToolButton
+    MoveScaled(2,2,5,5)
+    Picture = Picture["assets/close_and_back.png"]
+  }
+  { imgabt PictureBox
+    MoveScaled(1,58,10,4)
+    Mouse = Mouse.Pointing
+    Picture = Picture["assets/abo.png"]
+  }
+  { closethis PictureBox
+    MoveScaled(59,2,3,3)
+    Mouse = Mouse.Pointing
+    Picture = Picture["assets/exit.png"]
+    Mode = PictureBox.Contain
+  }
+}

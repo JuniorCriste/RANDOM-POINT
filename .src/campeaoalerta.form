@@ -1,0 +1,47 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,85.7143,27)
+  Visible = False
+  Background = &H1F1F1F&
+  Icon = Picture["rpicone.png"]
+  Border = False
+  Opacity = 90
+  { backgr PictureBox
+    MoveScaled(-12,-8,110,39)
+    Picture = Picture["assets/backblue_extend.png"]
+    Alignment = Align.Center
+    Mode = PictureBox.Cover
+  }
+  { bordacan PictureBox
+    MoveScaled(1,0,24,20)
+    AutoResize = True
+  }
+  { comum Label
+    MoveScaled(1,2,82,4)
+    Font = Font["Roboto,Bold,+4"]
+    Foreground = &HDFDFDF&
+    AutoResize = True
+    Text = ("O campeão é:")
+    Alignment = Align.Center
+  }
+  { finalr Label
+    MoveScaled(2,7,27,10)
+    Font = Font["Roboto,Bold,+8"]
+    Foreground = &H6DBC59&
+    AutoResize = True
+    Text = ("- - - - - -")
+    Alignment = Align.Center
+  }
+  { okclick ToolButton
+    MoveScaled(64,19,19,6)
+    Font = Font["Roboto,Bold,+7"]
+    Text = ("OK")
+  }
+  { donation Label
+    MoveScaled(1,22,18,4)
+    Mouse = Mouse.Pointing
+    AutoResize = True
+    Text = ("Fazer uma doação")
+  }
+}

@@ -1,0 +1,48 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,62,62)
+  Text = ("Random Point")
+  Icon = Picture["assets/rpicone.png"]
+  Resizable = False
+  Border = False
+  { backgr PictureBox
+    MoveScaled(-1,-1,87,76)
+    AutoResize = True
+    Picture = Picture["assets/backblue.png"]
+  }
+  { voltar ToolButton
+    MoveScaled(1,3,5,5)
+    Picture = Picture["assets/close_and_back.png"]
+  }
+  { !dados ListBox
+    MoveScaled(1,9,59,43)
+    #Public = True
+    Font = Font["Roboto,Bold"]
+    Border = False
+  }
+  { veia TextBox
+    MoveScaled(7,3,45,5)
+    Font = Font["Roboto,Bold,+1"]
+    Text = ("Escreva o Nome aqui")
+    Border = False
+  }
+  { agreg ToolButton
+    MoveScaled(53,3,6,5)
+    Font = Font["Roboto,Bold,+4"]
+    Text = ("+")
+  }
+  { gerarresutado ToolButton
+    MoveScaled(34,53,26,7)
+    Visible = False
+    Font = Font["Roboto,Bold,+5"]
+    Background = &H6277DD&
+    Foreground = &H161716&
+    Text = ("PRONTO!")
+  }
+  { glass PictureBox
+    MoveScaled(1,9,59,43)
+    Picture = Picture["assets/glass.png"]
+    Stretch = True
+  }
+}

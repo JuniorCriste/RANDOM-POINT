@@ -1,0 +1,156 @@
+' Gambas class file
+
+
+Public Sub go_Click()
+
+ Dim campeao As Integer
+ 
+  globallimiter = valolo.Value
+  
+  Randomize
+ campeao = Int(Rnd(1, globallimiter + 1))
+  
+  'Sorteador.construtor
+ ' Sorteador.Refresh
+  'Sorteador.Show
+  'Definicoes.Hide
+  
+  campeaoalerta.finalr.Text = campeao
+  
+ campeaoalerta.finalr.Alignment = Align.Center
+  
+ ' Definicoes.Close
+  
+  campeaoalerta.Show
+  
+ campeaoalerta.organizador
+
+End
+
+Public globallimiter As Integer
+
+Public Sub valolo_Change()
+
+
+End
+
+Public Sub opnum_Click()
+
+  valolo.MaxValue = 1000000
+  valolo.Visible = True
+  go.Visible = True
+  opnum.Visible = False
+  opnnam.Visible = False
+  pergunta.Text = "Indique o maior valor..."
+  If Splash.TRADUCAO = 2 Then
+  pergunta.Text = "Indicate the highest value ..."
+  Endif
+  voltar.Visible = True
+  closethis.Visible = False
+
+End
+
+Public Sub opnnam_Click()
+
+ Sorteador.dados.Clear
+ Sorteador.gerarresutado.Visible = False
+ Sorteador.Show
+ Definicoes.Hide
+ 
+
+End
+
+Public Sub pergunta_MouseDown()
+
+  
+
+End
+
+Public Sub fundo_MouseDown()
+
+  
+
+End
+
+Public Sub Form_Open()
+
+  Splash.Hide
+  valolo.Value = 10
+  voltar.Visible = False
+  If Splash.TRADUCAO = 2 Then
+  langEnglish
+  pergunta.Text = "Random numbers or names?"
+  Endif
+  Sorteador.Hide
+
+End
+
+Public Sub voltar_Click()
+
+  valolo.MaxValue = 1000000
+  valolo.Visible = True
+  go.Visible = False
+  opnum.Visible = True
+  opnnam.Visible = True
+  pergunta.Text = "Sortear Números ou Nomes?"
+  If Splash.TRADUCAO = 2 Then
+  pergunta.Text = "Random Numbers or Names?"
+  Endif
+  valolo.Visible = False
+  voltar.Visible = False
+  closethis.Visible = True
+
+End
+
+
+
+Public Sub form_Close()
+  
+  closethis_MouseDown
+  
+End
+
+
+Public Sub imgabt_MouseDown()
+
+  Creditos.Show
+
+End
+
+
+Public Sub langEnglish()
+  opnnam.Text = "NAMES"
+  opnum.Text = "NUMBERS"
+  go.Text = "GO!"
+  
+  Sorteador.veia.Text = "Write the name here"
+  Sorteador.gerarresutado.Text = "GO!"
+  
+  campeaoalerta.comum.Text = "The winner is..."
+  campeaoalerta.donation.Text = "Make a donation"
+  Creditos.donation.Text = "Make a donation"
+  
+  
+End
+
+
+
+Public Sub Form_KeyPress()
+
+  
+    If Key.Code = 65470 Then 
+      Creditos.Show
+    Endif
+End
+
+
+Public Sub closethis_MouseDown()
+
+  Shell "exit"
+  campeaoalerta.Close
+  Sorteador.Close
+  Creditos.Close
+  Splash.Close
+  Definicoes.Close
+
+End

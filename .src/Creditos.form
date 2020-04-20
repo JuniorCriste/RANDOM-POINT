@@ -1,0 +1,26 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,84,57)
+  Icon = Picture["assets/love.png"]
+  Resizable = False
+  Sticky = True
+  { happytime PictureBox
+    MoveScaled(-1,0,93,63)
+    Picture = Picture["assets/cred.png"]
+  }
+  { fakesite PictureBox
+    MoveScaled(16,48,50,3)
+    Mouse = Mouse.Pointing
+  }
+  { fakegit PictureBox
+    MoveScaled(22,52,41,4)
+    Mouse = Mouse.Pointing
+  }
+  { donation Label
+    MoveScaled(1,53,18,4)
+    Mouse = Mouse.Pointing
+    AutoResize = True
+    Text = ("Fazer uma doação")
+  }
+}

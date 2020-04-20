@@ -1,0 +1,19 @@
+# Gambas Form File 3.0
+
+{ Form Form
+  MoveScaled(0,0,85,57)
+  Text = ("Abrindo") & "..."
+  Icon = Picture["assets/love.png"]
+  Resizable = False
+  Border = False
+  Opacity = 90
+  { splashscreen PictureBox
+    MoveScaled(0,0,86,57)
+    Mouse = Mouse.Wait
+    Picture = Picture["assets/splash_sorteio.png"]
+  }
+  { temporizador #Timer
+    #MoveScaled(2,11)
+    Delay = 2650
+  }
+}

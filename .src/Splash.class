@@ -1,0 +1,57 @@
+' Gambas class file
+
+Public TRADUCAO As Integer    ' value = 1: portuguese | value => 2  english
+
+
+Public Sub Form_Open()
+
+Dim vinheta As Sound
+  lnggDetect ' Language Detect function (if portuguese or not)
+  Form.Title = "Random Point"
+  splashscreen.Left = 0
+  splashscreen.Top = 0
+  splashscreen.AutoResize = True
+  Splash.Width = splashscreen.Width
+  Splash.Height = splashscreen.Height
+  Splash.Center
+  
+  temporizador.Enabled = True  ' Time for fake loading
+  vinheta = Sound.Load("./assets/Sound/opening.ogg")    ' Song theme by Junior Criste
+  vinheta.play
+  temporizador.Start
+End
+
+
+
+
+Public Sub temporizador_Timer()
+  Dim contimer As Integer 
+  contimer = 0
+  If contimer >= 500 Then
+    temporizador.Enabled = False
+  Endif
+  Definicoes.Show
+  temporizador.Stop
+  
+End
+
+
+
+Public Sub lnggDetect()
+  
+  Dim conversora As String
+  Dim idioma As String
+ Shell "echo $LANG" To conversora
+    idioma = Trim(conversora)
+    Print idioma
+    If idioma = "pt_BR.UTF-8" Then
+      TRADUCAO = 1
+      Else
+      TRADUCAO = 2
+      Definicoes.langEnglish
+    Endif
+    
+    Print TRADUCAO
+
+End
+

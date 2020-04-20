@@ -1,0 +1,194 @@
+' Gambas class file
+
+ 
+Public Sub _new()
+
+End
+
+Public objIsImpossible As Object[]
+Public counter As Integer
+Public hor As Integer
+Public ver As Integer
+
+Public Sub Form_Open()
+
+counter = 0
+hor = 15
+ver = 15
+
+backgr.Top = 0
+backgr.Left = 0
+backgr.Height = Sorteador.Height
+backgr.Width = Sorteador.Width
+Sorteador.Height = backgr.Height
+Sorteador.Width = backgr.Width
+Sorteador.Center
+Splash.temporizador.Enabled = False
+Splash.Visible = False
+Definicoes.Hide
+
+
+
+End
+
+Public Sub form_Close()
+  
+ Definicoes.Show
+  
+End
+
+
+
+Public Sub sorteiolivre_Click()
+
+End
+
+Public Sub Button2_Click()
+
+
+
+End
+
+Public Sub inicial_Change()
+
+End
+
+Public Sub gerar_Click()
+
+
+End
+
+
+Public juntar As Label
+
+
+
+Public Sub newturn()
+
+Dim gera As TextBox
+  
+  objIsImpossible = New Object[] 
+
+
+   gera = New TextBox(Me)
+ 
+    gera.x = hor + 15
+    gera.y = ver 
+    gera.W = 125
+    gera.h = 30
+    gera.Font.Size = 10
+    gera.Alignment = Align.Left
+    gera.Text = "Nome aqui " & CString(counter + 1)
+    gera.Name = "gera" & CString(counter)
+     counter = counter + 1
+     hor = hor + 150
+     
+     If hor > 1119 Then
+     ver = ver + 35
+     hor = 0
+     Endif
+  End
+  
+  Public Sub construtor()
+  
+  Dim count As Integer
+count = 0
+Repeat 
+  newturn
+  count = count + 1
+  Until count = Definicoes.globallimiter
+  
+End
+
+Public Sub Sorteador_Drop()
+  
+  Definicoes.Refresh
+  Definicoes.Show
+  Definicoes.TopOnly
+  
+End
+
+
+
+
+Public Sub num5_MouseDown()
+
+  
+End
+
+Public Sub DataView1_MouseDown()
+
+  
+
+End
+
+Public Sub agreg_Click()
+If veia.Text <> "" And veia.Text <> " " And veia.Text <> "  " And veia.Text <> "   " And veia.Text <> "   " And veia.Text <> "   " And veia.Text <> "Write the name here" And veia.Text <> "Escreva o Nome aqui" Then
+  
+  dados.Add(veia.text)
+  veia.Text = ""
+  veia.SetFocus
+Endif
+
+End
+
+Public Sub gerarresutado_Click()
+
+   Dim campeao As Integer
+ Randomize
+ campeao = Int(Rnd(0, dados.Count))
+ dados.Index = campeao
+ 'dados.List.Sort
+
+ campeaoalerta.finalr.Text = dados.text
+ campeaoalerta.finalr.Alignment = Align.Center
+ 
+ campeaoalerta.Show
+ campeaoalerta.organizador
+End
+
+
+Public Sub Form_KeyPress()
+  
+    If Key.Code = 65470 Then 
+      Creditos.Show
+    Endif
+End
+
+Public Sub veia_KeyPress()
+  If Key.Code = 65293 Then 
+ agreg_Click
+Endif
+
+ 
+  If dados.Count > 1 Then
+    gerarresutado.Visible = True
+    Else
+      gerarresutado.Visible = False
+  Endif
+
+    End
+    
+Public Sub veia_MouseDown()
+  If veia.Text = "Escreva o Nome aqui" Then
+  veia.Text = ""
+  Endif
+
+  If veia.Text = "Write the name here" Then
+  veia.Text = ""
+  Endif
+  
+End
+
+    
+
+
+
+Public Sub voltar_Click()
+
+  Definicoes.Refresh
+  Definicoes.Show
+  Sorteador.Hide
+
+End
+

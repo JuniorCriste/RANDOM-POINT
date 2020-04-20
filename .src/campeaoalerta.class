@@ -1,0 +1,44 @@
+' Gambas class file
+
+
+Public Sub Form_Open()
+  organizador
+  campeaoalerta.Center
+  Splash.lnggDetect
+  'finalr.Alignment = Align.Center
+  'bordacan.Left = 0
+  'bordacan.Top = 0
+  'campeaoalerta.AutoResize = True
+  'comum.Left = ((campeaoalerta.Width / 2) - (comum.Width / 2))
+
+End
+
+Public Sub organizador()
+
+Dim centralizador As Integer
+centralizador = (600 / 2) - (finalr.W / 2)
+finalr.x = centralizador
+  
+End
+
+
+Public Sub okclick_Click()
+
+    campeaoalerta.Close
+
+End
+
+
+Public Sub Form_KeyPress()
+
+  
+    If Key.Code = 65470 Then 
+      Creditos.Show
+    Endif
+End
+
+Public Sub donation_MouseDown()
+
+  Shell "firefox https://www.informaticode.com.br/p/doacoes.html"
+
+End

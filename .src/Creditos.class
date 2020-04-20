@@ -1,0 +1,27 @@
+' Gambas class file
+
+
+Public Sub happytime_MouseDown()
+
+  
+
+End
+
+Public Sub fakesite_MouseDown()
+
+  Shell "firefox https://www.informaticode.com.br/"
+
+
+End
+
+Public Sub fakegit_MouseDown()
+
+  Shell "firefox https://github.com/JuniorCriste"
+
+End
+
+Public Sub donation_MouseDown()
+
+    Shell "firefox https://www.informaticode.com.br/p/doacoes.html"
+
+End
