@@ -6,7 +6,7 @@
 ### Random Point é um aplicativo para escolher nomes e números aleatórios. Criado usando Gambas IDE. 
 ###### Developed by <a href="https://www.informaticode.com.br/p/junior-criste.html">Junior Criste</a>
 
-Downloads:<br />
+## Downloads:
 <a href="https://github.com/JuniorCriste/RANDOM-POINT/releases/download/1.0/random-point.deb">Ubuntu, Mint, Bodhi</a><br />
 <a href="https://github.com/JuniorCriste/RANDOM-POINT/releases/download/1.0/random-point-fordebian.deb">Debian</a><br />
 <a href="https://github.com/JuniorCriste/RANDOM-POINT/releases/download/1.0/random-point-forsuse.rpm">Open Suse</a><br />
