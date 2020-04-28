@@ -12,7 +12,7 @@
 <a href="https://github.com/JuniorCriste/RANDOM-POINT/releases/download/1.0/random-point-forsuse.rpm">Open Suse</a><br />
 <a href="https://github.com/JuniorCriste/RANDOM-POINT/releases/download/1.0/random-point-forfedora.rpm">Fedora</a><br />
 
-
+<a href="https://github.com/JuniorCriste/RANDOM-POINT/blob/master/COPYING">LICENSE</a>
 
 <img src="https://2.bp.blogspot.com/-X2g_iU3G9XQ/Xp3j4qwl5_I/AAAAAAAAG18/uXDMy1M0-K0sYMUDsWKSPzwWBMK--uKmQCLcBGAsYHQ/s1600/capt1.png">
 
